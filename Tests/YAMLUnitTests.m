@@ -8,8 +8,7 @@
 
 @import Cocoa;
 @import XCTest;
-
-#import "YAMLSerialization.h"
+@import YAML;
 
 @interface YAMLUnitTests : XCTestCase
 
@@ -154,7 +153,7 @@
 
 #pragma mark - Support Methods
 
--(NSInputStream *)streamForExample:(NSString *)example {
+- (NSInputStream *)streamForExample:(NSString *)example {
   NSString *fileName = [_testBundle pathForResource:example ofType:@"yaml"];
   return [[NSInputStream alloc] initWithFileAtPath: fileName];
 }

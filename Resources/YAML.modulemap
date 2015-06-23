@@ -1,0 +1,7 @@
+framework module YAML {
+    requires objc
+    link framework "Foundation"
+    link framework "YAML"
+    
+    header "YAMLSerialization.h"
+}
